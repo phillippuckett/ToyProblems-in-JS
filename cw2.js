@@ -7,22 +7,14 @@ Person.prototype.greet = function(otherName) {
     return "Hi " + otherName + ", my name is " + name;
 }
 
-// A:
-var Person = function(name) {
+// A: add "this" to the object property 'name'
+function Person(name) {
     this.name = name;
-};
+}
 
-Person.prototype.greet = function() {
-    return "Hi my name is " + name;
-    //   return "Hi " + otherName + ", my name is " + name;
-};
-
-var 
-
-
-
-
-
+Person.prototype.greet = function(otherName) {
+    return "Hi " + otherName + ", my name is " + this.name;
+}
 
 /*NOTES*/
 
